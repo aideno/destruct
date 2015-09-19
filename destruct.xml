@@ -8,7 +8,7 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="26" inline="false">
-        <mutation elseif="2" else="1"></mutation>
+        <mutation elseif="4" else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="184" inline="true">
             <field name="OP">LT</field>
@@ -46,6 +46,42 @@
           <block type="movement_left" id="139"></block>
         </statement>
         <value name="IF2">
+          <block type="logic_compare" id="219" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="220">
+                <field name="OBJECT">RIGHTSIDE</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="221">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="movement_left" id="225"></block>
+        </statement>
+        <value name="IF3">
+          <block type="logic_compare" id="222" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="sensor_object" id="223">
+                <field name="OBJECT">LEFTSIDE</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="224">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="movement_right" id="226"></block>
+        </statement>
+        <value name="IF4">
           <block type="logic_compare" id="201" inline="true">
             <field name="OP">LT</field>
             <value name="A">
@@ -60,7 +96,7 @@
             </value>
           </block>
         </value>
-        <statement name="DO2">
+        <statement name="DO4">
           <block type="movement_forward" id="116"></block>
         </statement>
         <statement name="ELSE">
